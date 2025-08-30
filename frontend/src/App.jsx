@@ -9,7 +9,7 @@ import Dashboard from './pages/Dashboard';
 import Transactions from './pages/Transactions';
 import Analytics from './pages/Analytics';
 import Categories from './pages/Categories';
-
+import UploadReceipt from './pages/UploadReceipt';
 
 // Import components
 import Layout from './components/Layout';
