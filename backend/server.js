@@ -9,12 +9,20 @@ const connectDB = require('./config/database');
 
 // Route imports
 const authRoutes = require('./routes/auth');
+const transactionRoutes = require('./routes/transactions');
+const categoryRoutes = require('./routes/categories');
+const uploadRoutes = require('./routes/upload');
 
 const app = express();
 
 // Connect to database
 connectDB();
 
+// Create uploads directory if it doesn't exist
+const uploadsDir = path.join(__dirname, 'uploads');
+if (!fs.existsSync(uploadsDir)) {
+    fs.mkdirSync(uploadsDir, { recursive: true });
+}
 
 // CORS
 app.use(cors({
@@ -36,7 +44,9 @@ app.get('/api/health', (req, res) => {
 
 // API routes
 app.use('/api/auth', authRoutes);
-
+app.use('/api/transactions', transactionRoutes);
+app.use('/api/categories', categoryRoutes);
+app.use('/api/upload', uploadRoutes);
 
 // Handle 404 routes
 app.use('*', (req, res) => {
