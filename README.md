@@ -2,6 +2,8 @@
 
 A comprehensive personal finance management application built with React, Node.js, and MongoDB. Shikar helps users track their income and expenses with advanced features including AI-powered receipt processing and detailed analytics.
 
+## [Demo Video Link](https://drive.google.com/file/d/14NgIWU9UTI6wv2KKqBPM4lq88Of5wnLZ/view?usp=sharing)
+
 ## Features
 
 ### Core Functionality
